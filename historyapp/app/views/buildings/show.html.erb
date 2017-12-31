@@ -1,0 +1,24 @@
+<div class="row">
+
+  <div class="col s12 center">
+    <h3><%= @building.name %></h3>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Date: <%= @building.date_built %></h5>
+  </div>
+
+  <div class="col s12 center">
+    <% if @figure %>
+      <h5>Associated People: <%= link_to @figure.name, figure_path(@figure) %></h5>
+    <%end%>
+  </div>
+
+  <!-- <img src="/app/assets/images/hello.jpg"> -->
+
+
+  <div class="col s12 center">
+    <h5><%= link_to "Edit This Building", edit_building_path(@building) %></h5>
+  </div>
+
+</div>

@@ -1,0 +1,7 @@
+<h3>Buildings Home</h3>
+
+<% @buildings.each do |build| %>
+  <p><%= link_to build.name, build %></p>
+<%end%>
+
+<h4><%= link_to "Create New Building", new_building_path %></h4>

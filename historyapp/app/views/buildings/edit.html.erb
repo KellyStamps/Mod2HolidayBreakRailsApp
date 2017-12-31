@@ -1,0 +1,21 @@
+<% if flash[:error]%>
+  <% flash[:error].each do |err| %>
+    <p><%= err %></p>
+  <% end%>
+<% end%>
+
+<h1>Edit This Building</h1>
+
+<%= form_for @building do |f| %>
+  Name: <%= f.text_field :name %><br><br>
+
+  Date Built: <%= f.text_field :date_built %><br> <br>
+
+  Address (ex: '1313 Mockingbird Lane, Springfield, MO 65738'): <%= f.text_field :address%><br><br>
+
+  City: <%= f.collection_select(:city_id, @cities, :id, :name) %><br><br>
+
+  Historical Figure: <%= f.collection_select(:figure_id, @figures, :id, :name) %><br><br>
+
+  <%= f.submit %>
+<% end %>

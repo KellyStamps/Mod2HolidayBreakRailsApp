@@ -1,0 +1,7 @@
+<h3>Landmarks Home</h3>
+
+<% @landmarks.each do |land| %>
+  <p><%= link_to land.name, land %></p>
+<%end%>
+
+<h4><%= link_to "Create New Landmark", new_landmark_path %></h4>

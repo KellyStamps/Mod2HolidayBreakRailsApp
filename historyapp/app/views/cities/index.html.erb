@@ -1,0 +1,11 @@
+<div class="row">
+
+
+  <div class="col s12 center">
+    <h4>Discover something new about your city!</h4>
+
+    <% @cities.each do |city| %>
+      <h5><%= link_to city.name, city %></h5>
+    <% end %>
+  </div>
+</div>

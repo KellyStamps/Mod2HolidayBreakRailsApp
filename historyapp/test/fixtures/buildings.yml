@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date_built: MyString
+  city: one
+  figure: one
+
+two:
+  name: MyString
+  date_built: MyString
+  city: two
+  figure: two

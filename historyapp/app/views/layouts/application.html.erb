@@ -4,11 +4,27 @@
     <title>Historyapp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application',  media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href= 'https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
+
+    <nav>
+      <div class="nav-wrapper grey darken-1">
+        <a href="#" class="brand-logo center">EXPLORE YOUR HISTORY</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><%= link_to "Home", cities_path%></li>
+          <li><%= link_to "People", figures_path%></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>

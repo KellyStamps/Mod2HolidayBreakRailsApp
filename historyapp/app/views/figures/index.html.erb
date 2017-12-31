@@ -1,0 +1,14 @@
+<div class="row">
+
+  <div class="col s12 center">
+    <h3>Historic Figures<h3>
+      <p></p>
+  </div>
+
+  <div class="col s12 center">
+
+    <% @figures.each do |fig| %>
+      <h5><%= link_to fig.name, fig %></h5>
+    <% end %>
+  </div>
+</div>

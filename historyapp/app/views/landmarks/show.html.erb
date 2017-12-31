@@ -1,0 +1,21 @@
+<div class="row">
+
+  <div class="col s12 center">
+    <h3><%= @landmark.name %></h3>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Date: <%= @landmark.event_date %></h5>
+  </div>
+
+  <div class="col s12 center">
+    <% if @figure %>
+      <h5>Associated People: <%= link_to @figure.name, figure_path(@figure) %></h5>
+    <%end%>
+  </div>
+
+  <div class="col s12 center">
+    <h5><%= link_to "Edit This Landmark", edit_landmark_path(@landmark) %></h5>
+  </div>
+
+</div>

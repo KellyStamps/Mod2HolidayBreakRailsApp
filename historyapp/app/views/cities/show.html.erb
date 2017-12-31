@@ -1,0 +1,36 @@
+<div class="row">
+
+  <div class="col s12 center">
+    <h3><%= @city.name %></h3>
+  </div>
+
+  <div class="col s6 center">
+    <h5>Historic Buildings and Homes</h5>
+    <% @buildings.each do |build| %>
+      <p><%= link_to build.name, build %></p>
+    <%end%>
+  </div>
+
+  <div class="col s6 center">
+    <h5>Historic Landmarks</h5>
+    <% @landmarks.each do |land| %>
+      <p><%= link_to land.name, land %></p>
+    <%end%>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col s6 center">
+    <form action="/buildings/new">
+      <input type="submit" value="Create a New Building" />
+    </form>
+  </div>
+
+  <div class="col s6 center">
+    <form action="/landmarks/new">
+      <input type="submit" value="Create a New Landmark" />
+    </form>
+  </div>
+</div>

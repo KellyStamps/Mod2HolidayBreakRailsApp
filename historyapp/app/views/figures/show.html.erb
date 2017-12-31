@@ -1,0 +1,48 @@
+<div class="row">
+
+  <div class="col s12 center">
+    <h3><%= @figure.name %></h3>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Birth Date: <%= @figure.birth_date %></h5>
+  </div>
+
+  <div class="col s12 center">
+    <% if @figure.death_date != "still living" %>
+      <h5> Death Date: <%= @figure.death_date %></h5>
+    <%end%>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Place of Birth: <%= @figure.hometown %></h5>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Profession: <%= @figure.profession %></h5>
+  </div>
+
+  <div class="col s6 center">
+    <h5>Associated Buildings: </h5>
+      <% @buildings.each do |build| %>
+        <%= link_to build.name, building_path(build) %>
+      <%end%>
+  </div>
+
+  <div class="col s6 center">
+    <h5>Associated Landmarks: </h5>
+      <% @landmarks.each do |land| %>
+        <%= link_to land.name, landmark_path(land) %>
+      <%end%>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Biography</h5>
+    <p><%= @figure.bio %></p>
+  </div>
+
+
+
+  <!-- <img src="/app/assets/images/hello.jpg"> -->
+
+</div>
