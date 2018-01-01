@@ -5,7 +5,11 @@
   </div>
 
   <div class="col s12 center">
-    <h5>Date: <%= @building.date_built %></h5>
+    <h5>Date Built: <%= @building.date_built %></h5>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Address: <%= @building.address %></h5>
   </div>
 
   <div class="col s12 center">
@@ -14,11 +18,16 @@
     <%end%>
   </div>
 
-  <!-- <img src="/app/assets/images/hello.jpg"> -->
-
-
   <div class="col s12 center">
-    <h5><%= link_to "Edit This Building", edit_building_path(@building) %></h5>
+    <%= image_tag "building_#{@building.id}.jpg" %>
   </div>
 
+</div>
+
+<div class="row">
+  <div class="col s12 center">
+    <form action= "<%="/buildings/#{@building.id}/edit"%>" >
+      <input type="submit" value="Edit This Building" />
+    </form>
+  </div>
 </div>

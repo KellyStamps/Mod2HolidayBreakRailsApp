@@ -46,7 +46,7 @@ class BuildingsController < ApplicationController
   private
 
   def building_params
-    params.require(:building).permit(:name, :date_built, :city_id, :figure_id)
+    params.require(:building).permit(:name, :date_built, :city_id, :figure_id, :address)
   end
 
 end

@@ -4,4 +4,5 @@ class Building < ApplicationRecord
 
   validates :name, presence: true
   validates :date_built, presence: true
+  validates :address, presence: true
 end

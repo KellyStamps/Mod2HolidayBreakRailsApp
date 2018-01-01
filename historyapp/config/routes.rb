@@ -3,5 +3,12 @@ Rails.application.routes.draw do
   resources :cities, only: [:index, :show]
   resources :buildings, only: [:index, :show, :new, :create, :edit, :update]
   resources :landmarks, only: [:index, :show, :new, :create, :edit, :update]
-  resources :figures, only: [:show, :index, :new, :create]
+  resources :figures, only: [:show, :index, :new, :create, :destroy]
+
+  resources :users
+  get '/signup', to: 'users#new'
+  # get '/signin', to: 'sessions#new'
+  # post '/signin', to: 'sessions#create'
+  # get '/signout', to: 'sessions#destroy'
+
 end

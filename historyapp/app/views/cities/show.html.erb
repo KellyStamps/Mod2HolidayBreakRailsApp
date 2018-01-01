@@ -4,16 +4,20 @@
     <h3><%= @city.name %></h3>
   </div>
 
+  <div class="col s12 center">
+    <%= image_tag "city_#{@city.id}.jpg" %>
+  </div>
+
   <div class="col s6 center">
     <h5>Historic Buildings and Homes</h5>
-    <% @buildings.each do |build| %>
+    <% @city.building_list.each do |build| %>
       <p><%= link_to build.name, build %></p>
     <%end%>
   </div>
 
   <div class="col s6 center">
     <h5>Historic Landmarks</h5>
-    <% @landmarks.each do |land| %>
+    <% @city.landmark_list.each do |land| %>
       <p><%= link_to land.name, land %></p>
     <%end%>
   </div>
@@ -33,4 +37,15 @@
       <input type="submit" value="Create a New Landmark" />
     </form>
   </div>
+</div>
+
+<div class="row">
+
+  <div class="col s12 center">
+    <h3>Historic Figures</h3>
+    <% @city.figure_list.each do |fig| %>
+      <p><%= link_to fig.name, fig %></p>
+    <%end%>
+  </div>
+
 </div>

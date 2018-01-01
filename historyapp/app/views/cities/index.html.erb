@@ -1,9 +1,14 @@
 <div class="row">
-
+  <br><br>
+  <div class="col s12 center">
+    <%= image_tag "Excited-people.jpg" %>
+  </div>
 
   <div class="col s12 center">
     <h4>Discover something new about your city!</h4>
+  </div>
 
+  <div class="col s12 center">
     <% @cities.each do |city| %>
       <h5><%= link_to city.name, city %></h5>
     <% end %>

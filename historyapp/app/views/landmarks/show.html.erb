@@ -5,7 +5,11 @@
   </div>
 
   <div class="col s12 center">
-    <h5>Date: <%= @landmark.event_date %></h5>
+    <h5>Date Built: <%= @landmark.event_date %></h5>
+  </div>
+
+  <div class="col s12 center">
+    <h5>Address: <%= @landmark.address %></h5>
   </div>
 
   <div class="col s12 center">
@@ -15,7 +19,16 @@
   </div>
 
   <div class="col s12 center">
-    <h5><%= link_to "Edit This Landmark", edit_landmark_path(@landmark) %></h5>
+    <%= image_tag "landmark_#{@landmark.id}.jpg" %>
   </div>
 
+</div>
+
+
+<div class="row">
+  <div class="col s12 center">
+    <form action= "<%="/landmarks/#{@landmark.id}/edit"%>" >
+      <input type="submit" value="Edit This Landmark" />
+    </form>
+  </div>
 </div>
