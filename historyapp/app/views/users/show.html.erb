@@ -1,7 +1,6 @@
 <h1>Hello, <%= @user.name %>!</h1>
 
-<div class="col s12 left">
-  <form action= "<%="/users/#{@user.id}/edit"%>" >
-    <input type="submit" value="Edit Your Profile" />
-  </form>
-</div>
+<%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-primary" %> <br> <br>
+
+
+<!-- <%= link_to "Delete Profile", user_path(@user), method: :delete, class: "btn btn-primary" %> -->

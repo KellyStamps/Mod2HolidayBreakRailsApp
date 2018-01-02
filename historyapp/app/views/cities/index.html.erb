@@ -5,12 +5,22 @@
   </div>
 
   <div class="col s12 center">
-    <h4>Discover something new about your city!</h4>
+    <h4>Discover something new about your city</h4>
   </div>
 
   <div class="col s12 center">
-    <% @cities.each do |city| %>
-      <h5><%= link_to city.name, city %></h5>
-    <% end %>
+    <ul>
+      <% @cities.each do |city| %>
+        <h5><li><%= link_to city.name, city %></li></h5>
+      <% end %>
+    </ul>
   </div>
+</div>
+
+<div class="row">
+  <div class="col s12 center">
+    <h5>Don't see your city listed? <%= link_to "Create it here!", new_city_path %></h5>
+  </div>
+
+
 </div>

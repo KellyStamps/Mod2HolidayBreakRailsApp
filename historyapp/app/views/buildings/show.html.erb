@@ -29,5 +29,11 @@
     <form action= "<%="/buildings/#{@building.id}/edit"%>" >
       <input type="submit" value="Edit This Building" />
     </form>
+    <br>
   </div>
+
+  <div class="col s12 center">
+    <form action= "<%="/cities/#{@building.city_id}"%>" >
+      <input type="submit" value="City Home" />
+    </form>
 </div>

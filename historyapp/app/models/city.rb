@@ -3,7 +3,9 @@ class City < ApplicationRecord
   has_many :buildings
   has_many :landmarks
   has_many :figures, through: :buildings
-  has_many :figures, through: :landmarks
+  # has_many :figures, through: :landmarks
+
+  validates :name, presence: true, uniqueness: true
 
   def building_list
     self.buildings

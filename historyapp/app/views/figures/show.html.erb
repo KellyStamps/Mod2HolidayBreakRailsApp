@@ -8,36 +8,41 @@
       <%= image_tag "figure_#{@figure.id}.jpg" %>
   </div>
 
-  <div class="col s12 center">
-    <h5>Birth Date: <%= @figure.birth_date %></h5>
+  <div class="col 3 center">
+    <h5>Associated Buildings: </h5>
+      <% @buildings.each do |build| %>
+        <h5><%= link_to build.name, building_path(build) %></h5>
+      <%end%>
+      <br><br>
+  </div>
+
+  <div class="col 3 offset-s1 center">
+    <h5>Associated Landmarks: </h5>
+      <% @landmarks.each do |land| %>
+        <h5><%= link_to land.name, landmark_path(land) %></h5>
+      <%end%>
+      <br><br>
+  </div>
+
+  <div class="col 3  center">
+    <h5>Associated Cities: </h5>
+      <% @cities.each do |city| %>
+        <h5><%= link_to city.name, city_path(city) %></h5>
+      <%end%>
+      <br><br>
   </div>
 
   <div class="col s12 center">
+    <h5>Birth Date: <%= @figure.birth_date %></h5>
+
     <% if @figure.death_date != "still living" %>
       <h5> Death Date: <%= @figure.death_date %></h5>
     <%end%>
-  </div>
 
-  <div class="col s12 center">
     <h5>Place of Birth: <%= @figure.hometown %></h5>
-  </div>
 
-  <div class="col s12 center">
     <h5>Profession: <%= @figure.profession %></h5>
-  </div>
-
-  <div class="col s6 center">
-    <h5>Associated Buildings: </h5>
-      <% @buildings.each do |build| %>
-        <%= link_to build.name, building_path(build) %>
-      <%end%>
-  </div>
-
-  <div class="col s6 center">
-    <h5>Associated Landmarks: </h5>
-      <% @landmarks.each do |land| %>
-        <%= link_to land.name, landmark_path(land) %>
-      <%end%>
+    <br>
   </div>
 
   <div class="col s12 center">
@@ -45,8 +50,5 @@
     <p><%= @figure.bio %></p>
   </div>
 
-
-
-  <!-- <img src="/app/assets/images/hello.jpg"> -->
 
 </div>

@@ -13,9 +13,9 @@
 
   Address (ex: '1313 Mockingbird Lane, Springfield, MO 65738'): <%= f.text_field :address%><br><br>
 
-  <!-- City: <%= f.collection_select(:city_id, @cities, :id, :name) %><br><br>
+  City ID: <%= f.number_field :city_id%><br><br>
 
-  Historical Figure: <%= f.collection_select(:figure_id, @figures, :id, :name) %><br><br> -->
+  Historical Figure ID: <%= f.number_field :figure_id%><br><br>
 
-  <%= f.submit, class: "btn btn-primary"  %>
+  <%= f.submit %>
 <% end %>

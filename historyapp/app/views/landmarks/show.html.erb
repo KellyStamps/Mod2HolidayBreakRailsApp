@@ -5,7 +5,7 @@
   </div>
 
   <div class="col s12 center">
-    <h5>Date Built: <%= @landmark.event_date %></h5>
+    <h5>Important Date: <%= @landmark.event_date %></h5>
   </div>
 
   <div class="col s12 center">
@@ -29,6 +29,11 @@
   <div class="col s12 center">
     <form action= "<%="/landmarks/#{@landmark.id}/edit"%>" >
       <input type="submit" value="Edit This Landmark" />
-    </form>
+    </form><br>
+    <div class="col s12 center">
+      <form action= "<%="/cities/#{@landmark.city_id}"%>" >
+        <input type="submit" value="City Home" />
+      </form>
+    </div>
   </div>
 </div>

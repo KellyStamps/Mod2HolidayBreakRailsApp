@@ -1,4 +1,6 @@
 class FiguresController < ApplicationController
+  before_action :require_login
+  skip_before_action :require_login, only: [:index]
 
   def index
     @figures = Figure.all
@@ -14,6 +16,7 @@ class FiguresController < ApplicationController
     @figure = Figure.find(params[:id])
     @buildings = @figure.buildings
     @landmarks = @figure.landmarks
+    @cities = @figure.cities
   end
 
   def new

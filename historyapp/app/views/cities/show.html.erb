@@ -2,6 +2,11 @@
 
   <div class="col s12 center">
     <h3><%= @city.name %></h3>
+    <h4><%= @city.description %></h4>
+    <form action="<%="/cities/#{@city.id}/edit"%>">
+      <input type="submit" value="Edit Information" />
+    </form>
+    <br>
   </div>
 
   <div class="col s12 center">
@@ -9,7 +14,7 @@
   </div>
 
   <div class="col 3 left center">
-    <h5>Historic Homes</h5>
+    <h5>Historic Buildings</h5>
     <% @city.building_list.each do |build| %>
       <p><%= link_to build.name, build %></p>
     <%end%>
